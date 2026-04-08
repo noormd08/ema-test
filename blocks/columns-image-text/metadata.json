@@ -1,0 +1,31 @@
+{
+  "variantName": "columns-image-text",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-04-02T11:43:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.olamgroup.com/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "image-text",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + paragraph + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": ["image and text side-by-side layouts", "feature highlights", "about sections"],
+    "notSuitableFor": ["multi-column data layouts", "comparison tables"]
+  },
+  "usage": {
+    "pagesUsing": ["/content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-02T11:43:00.000Z"
+  }
+}

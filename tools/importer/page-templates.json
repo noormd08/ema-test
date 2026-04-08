@@ -1,0 +1,140 @@
+{
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.olamgroup.com/"
+      ],
+      "description": "Homepage with hero banner, card sections highlighting business groups, supply chain roles, and awards",
+      "blocks": [
+        {
+          "name": "carousel-hero-banner",
+          "instances": [".bannercarousel.home-banner .banner_carousel"]
+        },
+        {
+          "name": "columns-image-text",
+          "instances": [".olam-textandimage"]
+        },
+        {
+          "name": "cards-feature",
+          "instances": [".large-icon-banner", ".cardcomponent .card-content-wrapper", ".olam-related-article"]
+        },
+        {
+          "name": "hero-parallax",
+          "instances": [".olam-image-banner.olam-image-banner__desktop"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Banner",
+          "selector": ".bannercarousel.home-banner",
+          "style": null,
+          "blocks": ["carousel-hero-banner"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Re-imagining Agriculture",
+          "selector": "#backgroundcontainer-f46c75a257",
+          "style": null,
+          "blocks": ["columns-image-text"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Company Stats",
+          "selector": "#backgroundcontainer-b2a702bbb9",
+          "style": "grey",
+          "blocks": ["cards-feature"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Annual Reports Banner",
+          "selector": ".irbanner",
+          "style": null,
+          "blocks": ["hero-parallax"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Re-organisation Content",
+          "selector": "#backgroundcontainer-2f8f1b7953",
+          "style": "grey",
+          "blocks": [],
+          "defaultContent": [".cmp-contentfragment--re-organisation-of-olam h3", ".cmp-contentfragment__elements p", ".button-wrapper a"]
+        },
+        {
+          "id": "section-6",
+          "name": "Feature Cards",
+          "selector": "#backgroundcontainer-8f91257696",
+          "style": null,
+          "blocks": ["cards-feature"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Latest News",
+          "selector": "#backgroundcontainer-3e14c971d3",
+          "style": "grey",
+          "blocks": ["cards-feature"],
+          "defaultContent": [".richtext-theme h2"]
+        },
+        {
+          "id": "section-8",
+          "name": "Newsletter Subscribe",
+          "selector": ".notification",
+          "style": "dark",
+          "blocks": [],
+          "defaultContent": [".notification__content h2", ".notification__action a"]
+        }
+      ]
+    },
+    {
+      "name": "about-landing",
+      "urls": [
+        "https://www.olamgroup.com/about-olam.html"
+      ],
+      "description": "About section landing page with hero, card-based navigation to sub-pages, and overview content",
+      "blocks": []
+    },
+    {
+      "name": "about-content",
+      "urls": [
+        "https://www.olamgroup.com/about-olam/our-purpose.html",
+        "https://www.olamgroup.com/about-olam/group-overview.html",
+        "https://www.olamgroup.com/about-olam/ethics-and-compliance.html"
+      ],
+      "description": "About content pages with rich text, images, and informational sections",
+      "blocks": []
+    },
+    {
+      "name": "people-listing",
+      "urls": [
+        "https://www.olamgroup.com/about-olam/board-of-directors.html",
+        "https://www.olamgroup.com/about-olam/executive-committees.html"
+      ],
+      "description": "People profile listing pages with photo grid cards and expandable biographies",
+      "blocks": []
+    },
+    {
+      "name": "contact-page",
+      "urls": [
+        "https://www.olamgroup.com/contactus.html"
+      ],
+      "description": "Contact page with inquiry form and departmental contact blocks",
+      "blocks": []
+    },
+    {
+      "name": "legal-page",
+      "urls": [
+        "https://www.olamgroup.com/privacy.html",
+        "https://www.olamgroup.com/cookies.html",
+        "https://www.olamgroup.com/olam-disclaimer.html"
+      ],
+      "description": "Text-heavy legal and policy pages with hierarchical content sections",
+      "blocks": []
+    }
+  ]
+}
