@@ -1,0 +1,96 @@
+/* Hero Parallax - Olam full-width banner with overlay */
+.hero-parallax-container .hero-parallax-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-parallax {
+  position: relative;
+  padding: 60px 24px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-parallax h1,
+.hero-parallax h2,
+.hero-parallax h3,
+.hero-parallax h4,
+.hero-parallax h5,
+.hero-parallax h6 {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+}
+
+.hero-parallax p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  font-size: var(--body-font-size-m);
+}
+
+.hero-parallax a.button {
+  display: inline-block;
+  background-color: var(--olam-dark-green);
+  color: #fff;
+  padding: var(--button-padding);
+  font-weight: bold;
+  font-size: var(--body-font-size-s);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: var(--button-transition);
+}
+
+.hero-parallax a.button:hover {
+  background-color: var(--olam-darker-green);
+}
+
+.hero-parallax.no-image * {
+  color: var(--text-color);
+}
+
+.hero-parallax picture {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.hero-parallax img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Dark overlay for text readability */
+.hero-parallax::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(37 55 70 / 50%);
+  z-index: 0;
+}
+
+.hero-parallax > div {
+  position: relative;
+  z-index: 1;
+}
+
+@media (width >= 900px) {
+  .hero-parallax {
+    padding: 80px 32px;
+    min-height: 400px;
+  }
+
+  .hero-parallax h2 {
+    font-size: 36px;
+  }
+}

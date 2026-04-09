@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.olamgroup.com/",
+  "path": "index",
+  "timestamp": "2026-04-02T11:58:58.763Z",
+  "title": "Home",
+  "template": "homepage",
+  "blocks": [
+    "carousel-hero-banner",
+    "columns-image-text",
+    "cards-feature",
+    "cards-feature",
+    "cards-feature",
+    "cards-feature",
+    "hero-parallax"
+  ]
+}
