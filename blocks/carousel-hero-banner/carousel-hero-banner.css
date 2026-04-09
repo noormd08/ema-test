@@ -1,3 +1,9 @@
+/* Carousel Hero Banner - Olam homepage hero slider */
+.carousel-hero-banner-container .carousel-hero-banner-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
 .carousel-hero-banner .carousel-hero-banner-slides-container {
   position: relative;
 }
@@ -29,15 +35,7 @@
   justify-content: center;
   position: relative;
   width: 100%;
-  min-height: min(50vw, calc(100dvh - var(--header-height)));
-}
-
-.carousel-hero-banner .carousel-hero-banner-slide:has(.carousel-hero-banner-slide-content[data-align='center']) {
-  align-items: center;
-}
-
-.carousel-hero-banner .carousel-hero-banner-slide:has(.carousel-hero-banner-slide-content[data-align='right']) {
-  align-items: flex-end;
+  min-height: 400px;
 }
 
 .carousel-hero-banner .carousel-hero-banner-slide .carousel-hero-banner-slide-image picture {
@@ -53,40 +51,84 @@
 
 .carousel-hero-banner .carousel-hero-banner-slide .carousel-hero-banner-slide-content {
   z-index: 1;
-  margin: 68px;
-  padding: 16px;
-  color: white;
-  background-color: rgba(19 19 19 / 75%);
+  margin: 24px;
+  padding: 24px;
+  color: #fff;
+  background-color: rgb(37 55 70 / 85%);
   position: relative;
-  width: var(--slide-content-width, auto);
+  max-width: 600px;
 }
 
+.carousel-hero-banner .carousel-hero-banner-slide .carousel-hero-banner-slide-content h1 {
+  color: #fff;
+  font-size: 24px;
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+.carousel-hero-banner .carousel-hero-banner-slide .carousel-hero-banner-slide-content a {
+  display: inline-block;
+  margin-right: 12px;
+  margin-top: 12px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-hero-banner .carousel-hero-banner-slide .carousel-hero-banner-slide-content a:first-of-type {
+  background-color: var(--olam-dark-green);
+  color: #fff;
+  border: 2px solid var(--olam-dark-green);
+}
+
+.carousel-hero-banner .carousel-hero-banner-slide .carousel-hero-banner-slide-content a:first-of-type:hover {
+  background-color: var(--olam-darker-green);
+  border-color: var(--olam-darker-green);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-hero-banner .carousel-hero-banner-slide .carousel-hero-banner-slide-content a:last-of-type {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.carousel-hero-banner .carousel-hero-banner-slide .carousel-hero-banner-slide-content a:last-of-type:hover {
+  background-color: #fff;
+  color: var(--olam-dark-blue);
+}
+
+/* Slide indicators */
 .carousel-hero-banner .carousel-hero-banner-slide-indicators {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 6px 12px;
-  padding: 12px;
-  background-color: var(--light-color);
-  line-height: 0;
+  gap: 8px;
+  padding: 16px;
+  background-color: var(--olam-dark-blue);
 }
 
 .carousel-hero-banner .carousel-hero-banner-slide-indicator button {
-  width: 24px;
-  height: 24px;
+  width: 12px;
+  height: 12px;
   margin: 0;
   padding: 0;
   border-radius: 50%;
-  background-color: #dadada;
+  background-color: rgb(255 255 255 / 40%);
+  border: none;
+  cursor: pointer;
   transition: background-color 0.2s;
 }
 
 .carousel-hero-banner .carousel-hero-banner-slide-indicator button:disabled,
-.carousel-hero-banner .carousel-hero-banner-slide-indicator button:hover,
-.carousel-hero-banner .carousel-hero-banner-slide-indicator button:focus-visible {
-  background-color: var(--text-color);
+.carousel-hero-banner .carousel-hero-banner-slide-indicator button:hover {
+  background-color: var(--olam-light-green);
 }
 
+/* Navigation buttons */
 .carousel-hero-banner .carousel-hero-banner-navigation-buttons {
   position: absolute;
   top: 50%;
@@ -107,19 +149,20 @@
   margin: 0;
   border-radius: 50%;
   padding: 0;
-  background-color: rgba(19 19 19 / 25%);
+  border: none;
+  background-color: rgb(37 55 70 / 50%);
   transition: background-color 0.2s;
+  cursor: pointer;
 }
 
-.carousel-hero-banner .carousel-hero-banner-navigation-buttons button:hover,
-.carousel-hero-banner .carousel-hero-banner-navigation-buttons button:focus-visible {
-  background-color: rgba(19 19 19 / 75%);
+.carousel-hero-banner .carousel-hero-banner-navigation-buttons button:hover {
+  background-color: rgb(37 55 70 / 80%);
 }
 
 .carousel-hero-banner .carousel-hero-banner-navigation-buttons button::after {
   display: block;
   content: '';
-  border: 2px solid;
+  border: 2px solid #fff;
   border-bottom: 0;
   border-left: 0;
   height: 12px;
@@ -136,18 +179,32 @@
 }
 
 @media (width >= 600px) {
-  .carousel-hero-banner .carousel-hero-banner-navigation-buttons {
-    left: 24px;
-    right: 24px;
+  .carousel-hero-banner .carousel-hero-banner-slide {
+    min-height: 500px;
   }
 
   .carousel-hero-banner .carousel-hero-banner-slide .carousel-hero-banner-slide-content {
-    --slide-content-width: calc((100% - 184px) / 2);
-
-    margin: 92px;
+    margin: 48px;
+    padding: 32px;
   }
 
-  .carousel-hero-banner .carousel-hero-banner-slide .carousel-hero-banner-slide-content[data-align='justify'] {
-    --slide-content-width: auto;
+  .carousel-hero-banner .carousel-hero-banner-slide .carousel-hero-banner-slide-content h1 {
+    font-size: 32px;
+  }
+}
+
+@media (width >= 900px) {
+  .carousel-hero-banner .carousel-hero-banner-slide {
+    min-height: 600px;
+  }
+
+  .carousel-hero-banner .carousel-hero-banner-slide .carousel-hero-banner-slide-content {
+    margin: 80px;
+    padding: 40px;
+    max-width: 500px;
+  }
+
+  .carousel-hero-banner .carousel-hero-banner-slide .carousel-hero-banner-slide-content h1 {
+    font-size: 36px;
   }
 }

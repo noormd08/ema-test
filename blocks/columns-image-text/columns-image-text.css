@@ -1,10 +1,14 @@
+/* Columns Image-Text - Olam side-by-side image + content */
 .columns-image-text > div {
   display: flex;
   flex-direction: column;
+  gap: 24px;
 }
 
 .columns-image-text img {
   width: 100%;
+  height: auto;
+  display: block;
 }
 
 .columns-image-text > div > div {
@@ -19,11 +23,39 @@
   display: block;
 }
 
+.columns-image-text h2 {
+  color: var(--olam-dark-blue);
+  font-size: var(--heading-font-size-xl);
+  margin-top: 0;
+}
+
+.columns-image-text p {
+  color: var(--olam-dark-grey);
+  line-height: 1.6;
+}
+
+.columns-image-text a.button {
+  display: inline-block;
+  background-color: var(--olam-dark-green);
+  color: #fff;
+  padding: var(--button-padding);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: var(--body-font-size-s);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: var(--button-transition);
+}
+
+.columns-image-text a.button:hover {
+  background-color: var(--olam-darker-green);
+}
+
 @media (width >= 900px) {
   .columns-image-text > div {
     align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    flex-direction: row;
+    gap: 48px;
   }
 
   .columns-image-text > div > div {
